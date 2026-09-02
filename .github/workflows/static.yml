@@ -34,7 +34,7 @@ jobs:
       - name: Updating index.html
         run: |
           echo "<h2>Deployment Number: ${{ github.run_number }}</h2>" >> index.html
-          echo '<h2>Deployed Environment: <span style="color:${{ github.ref_name }};">${{ github.ref_name }}</span></h2>' >> index.html
+          echo "<h2>Deployed Environment: <span style=\"color:${{ github.ref_name }};\">${{ github.ref_name }}</span></h2>" >> index.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
