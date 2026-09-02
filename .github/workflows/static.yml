@@ -33,7 +33,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Updating index.html
         run: |
-          echo "<h2>Deployment Number: </h2>${{ github.run_number }}" >> index.html
+          echo "<h2>Deployment Number: ${{ github.run_number }}</h2>" >> index.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
